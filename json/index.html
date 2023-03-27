@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nazwa zakładki</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // Po załadowaniu strony, wykonaj następujące polecenia:
+        $("#wyzwalacz").click(function () {
+          //Po klknieciu elementu id=wyzwalacz
+          $.getScript("aktywator.js", function () {
+            //Uruchom aktywator.js
+            console.log("aktywator.js uruchomiony"); //Komunikat konsoli
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <input type="text" placeholder="Imię" id="h_imie" />
+    <!--Źródło-->
+    <input type="button" id="wyzwalacz" value="Szukaj" />
+    <!--wyzwalacz-->
+    <span id="h_response"></span>
+    <!--Wyświetlacz-->
+  </body>
+</html>

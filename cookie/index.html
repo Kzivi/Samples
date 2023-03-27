@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cookie</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // Po załadowaniu strony, wykonaj następujące polecenia:
+        $.getScript("cookie.js", function () {
+          //Uruchom cookie.js
+          console.log("cookie.js uruchomiony"); //Komunikat konsoli
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p>
+      Stronę odwiedzono:
+      <span id="h_amount"> </span>
+    </br>
+      Ostatni raz:
+      <span id="h_last"> </span>
+    </p>
+    <!--Wyświetlacz-->
+  </body>
+</html>
